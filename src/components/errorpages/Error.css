@@ -1,0 +1,44 @@
+.Error-back {
+    background-image: url("./12887.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+}
+
+.Error-head {
+    background-color: steelblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: calc(10px + 2vmin);
+    color: bisque;
+}
+
+.Error-mainsentense {
+    color: aqua;
+    margin-left: 100px;
+    margin-top: 50px;
+    font-size: 85px;
+}
+
+.sub-sentense {
+    margin-left: 125px;
+}
+
+@media (max-width : 500px) {
+    .Error-mainsentense {
+        margin-left: 50px;
+        margin-top: 50px;
+        font-size: 43px;
+    }
+    .sub-sentense {
+        margin-left: 60px;
+    }
+
+    .backimage {
+        display: none;
+    }
+}

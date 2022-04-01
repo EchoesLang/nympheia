@@ -5,8 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import {Aone, Atwo} from './components/navvar/Topnav';
-
-var errorpage = "Not Found";
+import Error from './components/errorpages/Error'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,7 +14,7 @@ ReactDOM.render(
       <Route path='/nympheia' element={<App />}></Route>
       <Route path='/nympheia/feat' element={<Aone />}></Route>
       <Route path='/nympheia/price' element={<Atwo />}></Route>
-      <Route path='/*' element={errorpage}></Route>
+      <Route path='/*' element={<Error></Error>}></Route>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
