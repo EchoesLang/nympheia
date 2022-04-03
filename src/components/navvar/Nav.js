@@ -1,41 +1,33 @@
 import './Nav.css';
+import { useState } from "react";
+import { withRouter } from "react-router-dom";
 
 function Navbar() {
+	//const [menuToggle, setMenuToggle] = useState<boolean>(false);
+	let [menuToggle, setMenuToggle] = useState(false)
+	const menu = [
+		{ name: "Home", address: "/" },
+		{ name: "Menu-1", address: "/menu1" },
+		{ name: "Menu-2", address: "/menu2" },
+		{ name: "Menu-3", address: "/menu3" },
+		{ name: "Menu-4", address: "/menu4" },
+	];
+
+
+
     return (
-        <div className="sidebar">
+        <div className="navbar">
 
             <nav className="Menu">
-                <header className="Major">
-					<h2>Menu</h2>
+                <header className="Nav-Major">
+					<p className='Nav-Mainname'>Nympheia</p>
+					<ul className='elements'>
+						<li><a className='elements-item' href='/nympheia'>Home</a></li>
+						<li><a className='elements-item' href='/nympheia/introduce'>Intro</a></li>
+						<li><a className='elements-item' href='/nympheia/using'>Using</a></li>
+						<li><a className='elements-item' href='/nympheia/tutorial'>Tutorial</a></li>
+					</ul>
 				</header>
-                <ul>
-                    <li><a>Homepage</a></li>
-                    <li><a>Generic</a></li>
-                    <li><a>Elements</a></li>
-					<li>
-						<span className="Opener">Submenu</span>
-						<ul>
-							<li><a>Lorem Dolor</a></li>								
-							<li><a>Ipsum Adipiscing</a></li>
-							<li><a>Tempus Magna</a></li>
-							<li><a>Feugiat Veroeros</a></li>
-						</ul>
-					</li>
-					<li><a>Etiam Dolore</a></li>
-					<li><a>Adipiscing</a></li>
-					<li>
-						<span className="Opener">Another Submenu</span>
-						<ul>
-							<li><a>Lorem Dolor</a></li>
-							<li><a>Ipsum Adipiscing</a></li>
-							<li><a>Tempus Magna</a></li>
-							<li><a>Feugiat Veroeros</a></li>
-						</ul>
-					</li>
-					<li><a>Maximus Erat</a></li>
-					<li><a>Sapien Mauris</a></li>
-					<li><a>Amet Lacinia</a></li>
-				</ul>
 			</nav>			
 
 		</div>

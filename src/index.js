@@ -4,18 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import {Aone, Atwo} from './components/navvar/Topnav';
 import Error from './components/errorpages/Error'
+import Intro from './components/introduce/Intro'
+import Navbar from './components/navvar/Nav'
+import How from './sub-app/howuse/How'
+import IntroApp from './sub-app/introduce/IntroApp'
+import TutorialApp from './sub-app/tutorial/Tutorial'
 
 ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      <Route path='/' element={<Navigate replace to="/nympheia"></Navigate>}></Route>
-      <Route path='/nympheia' element={<App />}></Route>
-      <Route path='/nympheia/feat' element={<Aone />}></Route>
-      <Route path='/nympheia/price' element={<Atwo />}></Route>
-      <Route path='/*' element={<Error></Error>}></Route>
-    </Routes>
+    <div className='main-board'>
+      <div className='mainhead'><Navbar></Navbar></div>
+      <Routes>
+        <Route path='/' element={<Navigate replace to="/nympheia"></Navigate>}></Route>
+        <Route path='/nympheia' element={<App />}></Route>
+        <Route path='/nympheia/introduce' element={<IntroApp></IntroApp>}></Route>
+        <Route path='/nympheia/using' element={<How></How>}></Route>
+        <Route path='/nympheia/tutorial' element={<TutorialApp></TutorialApp>}></Route>
+        <Route path='/*' element={<Error></Error>}></Route>
+      </Routes>
+      <div className='bottom'>
+        <Intro></Intro>
+      </div>
+    </div>
   </BrowserRouter>,
   document.getElementById('root')
 );

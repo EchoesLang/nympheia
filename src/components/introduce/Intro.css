@@ -1,12 +1,31 @@
-.Major {
-    color: aqua;
+.Intro-Major {
+    color: rgb(232, 223, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .Contact {
-    color: snow;
-    margin-bottom: auto;
+    color: rgb(232, 223, 255);
 }
 
 .Item {
-    text-align: center;
+    list-style: none;
+}
+
+.Inhead {
+    background-color: #343a46;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(5px + 2vmin);
+}
+
+@media (max-width: 500px) {
+    .Ment {
+        display: none;
+    }
+    .Contact {
+        display: none;
+    }
 }
