@@ -11,8 +11,13 @@
     color: aqua;
 }
 
+.Menubar {
+    display: none;
+}
+
 .Nav-Mainname {
     text-align: left;
+    display: flex;
     font-size: calc(10px + 2vmin);
 }
 
@@ -30,31 +35,21 @@
     text-decoration: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .navbar {
-        background-color: teal;
-        font-weight: bold;
-        height: auto;
+        padding-left: 0px;
     }
-    .Nav-Major {
-        display: flex;
-        flex-direction: row;
-        color: aqua;
-        align-items: flex-start;
-    }
-    .Nav-Mainname {
+    .Menu {
         display: none;
     }
-    .elements {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        list-style: none;
-        align-items: flex-start;
+    .Menubar {
+        display: contents;
     }
-    .elements-item {
-        padding: 10px;
-        color: rgb(206, 255, 221);
-        text-decoration: none;
+    .Nav-Mainname {
+        padding-left: 50px;
+        text-align: center;
+        display: flex;
+        font-size: calc(10px + 3vmin);
+        color: aqua;
     }
 }

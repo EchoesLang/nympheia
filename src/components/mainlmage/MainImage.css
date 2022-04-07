@@ -1,0 +1,11 @@
+.Main-Image {
+    height: 500px;
+    width: 500px;
+}
+
+@media (max-width: 500px) {
+    .Main-Image {
+        height: 100px;
+        width: 100px;
+    }
+}

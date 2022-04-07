@@ -10,6 +10,7 @@ import Navbar from './components/navvar/Nav'
 import How from './sub-app/howuse/How'
 import IntroApp from './sub-app/introduce/IntroApp'
 import TutorialApp from './sub-app/tutorial/Tutorial'
+import Editor from './sub-app/editor/Editor'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route path='/nympheia/introduce' element={<IntroApp></IntroApp>}></Route>
         <Route path='/nympheia/using' element={<How></How>}></Route>
         <Route path='/nympheia/tutorial' element={<TutorialApp></TutorialApp>}></Route>
+        <Route path='/nympheia/editor' element={<Editor></Editor>}></Route>
         <Route path='/*' element={<Error></Error>}></Route>
       </Routes>
       <div className='bottom'>

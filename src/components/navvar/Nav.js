@@ -1,23 +1,19 @@
 import './Nav.css';
 import { useState } from "react";
+import Nav_Var from './Var';
 import { withRouter } from "react-router-dom";
 
 function Navbar() {
 	//const [menuToggle, setMenuToggle] = useState<boolean>(false);
 	let [menuToggle, setMenuToggle] = useState(false)
-	const menu = [
-		{ name: "Home", address: "/" },
-		{ name: "Menu-1", address: "/menu1" },
-		{ name: "Menu-2", address: "/menu2" },
-		{ name: "Menu-3", address: "/menu3" },
-		{ name: "Menu-4", address: "/menu4" },
-	];
-
-
+	const menusetter = () => setMenuToggle(!menuToggle);
 
     return (
         <div className="navbar">
-
+			<div className='Menubar'>
+				<Nav_Var></Nav_Var>
+				<p className='Nav-Mainname'>Nympheia</p>
+			</div>
             <nav className="Menu">
                 <header className="Nav-Major">
 					<p className='Nav-Mainname'>Nympheia</p>
@@ -26,10 +22,10 @@ function Navbar() {
 						<li><a className='elements-item' href='/nympheia/introduce'>Intro</a></li>
 						<li><a className='elements-item' href='/nympheia/using'>Using</a></li>
 						<li><a className='elements-item' href='/nympheia/tutorial'>Tutorial</a></li>
+						<li><a className='elements-item' href='/nympheia/editor'>Editor</a></li>
 					</ul>
 				</header>
 			</nav>			
-
 		</div>
     );
 }
