@@ -1,7 +1,7 @@
 .navbar {
     background-color: teal;
     font-weight: bold;
-    padding-left: 50px;
+    padding-left: 10px;
     height: 80px;
 }
 
@@ -22,20 +22,44 @@
 }
 
 .elements {
-    font-size: calc(10px + 2vmin);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
 }
 
-.elements-item {
-    padding: 10px;
-    color: rgb(151, 255, 182);
-    text-decoration: none;
+.Nav-Nympheialogo {
+    font-size: calc(10px + 2vmin);
+    align-items: flex-start;
 }
 
-@media (max-width: 700px) {
+.nav-text-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 70px;
+}
+
+.nav-text-main a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+.nav-text-main a:hover {
+    background-color: #004b4b;
+    color: rgb(79, 173, 255);
+}
+
+@media (max-width: 950px) {
     .navbar {
         padding-left: 0px;
     }
@@ -46,10 +70,11 @@
         display: contents;
     }
     .Nav-Mainname {
-        padding-left: 50px;
+        padding-left: 30px;
+        padding-bottom: 10px;
         text-align: center;
         display: flex;
-        font-size: calc(10px + 3vmin);
+        font-size: calc(8px + 3vmin);
         color: aqua;
     }
 }

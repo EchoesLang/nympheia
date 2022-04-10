@@ -1,11 +1,13 @@
 .Main-Image {
     height: 500px;
     width: 500px;
+    align-items: center;
 }
 
 @media (max-width: 500px) {
     .Main-Image {
-        height: 100px;
-        width: 100px;
+        height: 350px;
+        width: 350px;
+        align-items: center;
     }
 }

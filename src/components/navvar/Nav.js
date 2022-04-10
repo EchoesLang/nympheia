@@ -1,6 +1,8 @@
 import './Nav.css';
 import { useState } from "react";
 import Nav_Var from './Var';
+import { Link } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
 import { withRouter } from "react-router-dom";
 
 function Navbar() {
@@ -8,26 +10,31 @@ function Navbar() {
 	let [menuToggle, setMenuToggle] = useState(false)
 	const menusetter = () => setMenuToggle(!menuToggle);
 
-    return (
-        <div className="navbar">
+	return (
+		<div className="navbar">
 			<div className='Menubar'>
 				<Nav_Var></Nav_Var>
 				<p className='Nav-Mainname'>Nympheia</p>
 			</div>
-            <nav className="Menu">
-                <header className="Nav-Major">
-					<p className='Nav-Mainname'>Nympheia</p>
+			<nav className="Menu">
+				<header className="Nav-Major">
 					<ul className='elements'>
-						<li><a className='elements-item' href='/nympheia'>Home</a></li>
-						<li><a className='elements-item' href='/nympheia/introduce'>Intro</a></li>
-						<li><a className='elements-item' href='/nympheia/using'>Using</a></li>
-						<li><a className='elements-item' href='/nympheia/tutorial'>Tutorial</a></li>
-						<li><a className='elements-item' href='/nympheia/editor'>Editor</a></li>
+						<li><p className='Nav-Nympheialogo'>Nympheia</p></li>
+						{SidebarData.map((item, index) => {
+							return (
+								<li key={index} className={item.cName+'-main'}>
+									<a href={item.path}>
+										{item.icon}
+										<span>{item.title}</span>
+									</a>
+								</li>
+							);
+						})}
 					</ul>
 				</header>
-			</nav>			
+			</nav>
 		</div>
-    );
+	);
 }
 
 export default Navbar;

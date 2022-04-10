@@ -2,8 +2,12 @@ import './Editor.css'
 
 function Editor() {
     return (
-        <div>
-            <p>Editor</p>
+        <div className="Editor-App">
+            <header className="Editor-App-header">
+                <p>
+                    Editor Page
+                </p>
+            </header>
         </div>
     )
 }

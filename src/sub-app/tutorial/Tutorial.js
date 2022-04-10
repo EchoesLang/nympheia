@@ -2,8 +2,12 @@ import './Tutorial.css'
 
 function TutorialApp() {
     return (
-        <div>
-            <p>Tutorial</p>
+        <div className="Tutorial-App">
+            <header className="Tutorial-App-header">
+                <p>
+                    Tutorial
+                </p>
+            </header>
         </div>
     )
 }
