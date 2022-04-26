@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="/echolang"
+          href="http://echoechoes.site"
           rel="noopener noreferrer"
         >
           GO ECHOLANG
