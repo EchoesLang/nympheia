@@ -29,29 +29,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title id="title"></title>
-    <script>
-      var linkname = document.location.href;
-      var lin = linkname.split('/');
-      var length = lin.length;
-      var strings = "";
-
-      for (i = 0; i < length; i++) {
-        if ((lin[i] == "nympheia") || (lin[i] == "echolang")) {
-          strings = strings + lin[i];
-          if (i < (length - 1)) {
-            strings = strings +  " - " + lin[i + 1];
-          }
-          break;
-        }
-      }
-
-      console.log(strings);
-      console.log(linkname);
-      console.log(length);
-      console.log(lin);
-      document.getElementById("title").innerHTML=strings;
-    </script>
+    <title id="title">NYMPHEIA</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
